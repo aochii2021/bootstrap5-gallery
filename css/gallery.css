@@ -1,0 +1,14 @@
+.bg-img {
+  /* 猫の画像のurl読みこみ */
+  background-image: url("https://source.unsplash.com/bOy4OPu98lI");
+
+  /* divダグ全体を画像で覆う指定 */
+  background-size: cover;
+
+
+  background-position: center 30%;
+}
+
+body {
+  font-family: "Hiragino Kaku Gothic ProN", "メイリオ", sans-serif;
+}

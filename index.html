@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>猫のフォトギャラリー</title>
+    <!-- メタ設定を行う -->
+    <meta name="description" content="かわいい猫のフォトギャラリーです．">
+
+    <!-- Bootstrap5 を読み込むためのリンク -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <!-- Bootstrap Iconsを使うためのリンク．これでアイコンをフォントとして使うことができる -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+    <!-- cssファイル読み込み -->
+    <link rel="stylesheet" href="css/gallery.css">
+  </head>
+
+  <body>
+    <!-- Navbarの設定（ページの一番上） sticky-topでスクロールしてもこのnavタグは表示されるようになる -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+
+      <!-- このdiv内の要素を画面いっぱいに表示する．containerは固定幅，container-fluidは可変幅となる（ウィンドウ幅をカテも常に画面いっぱいになるようにする） -->
+      <div class="container-fluid">
+        <!-- iタグでbootstrap iconsの写真svgを挿入している．me-1クラスでマージンライトに0.25remのスペースがつく -->
+        <a class="navbar-brand" href="index.html"><i class="bi bi-images me-1"></i>Cats</a>
+
+        <!-- 画面幅が狭い時にハンバーガーメニューを表示するようにする設定(bootstrap5からコピペ) -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+
+              <!-- Homeタグだけアクティブにする -->
+              <a class="nav-link active" href="index.html">Home</a>
+
+            </li>
+            <li class="nav-item">
+
+              <a class="nav-link" href="#">New</a>
+            </li>
+            <li class="nav-item">
+
+              <a class="nav-link" href="#">About</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <!-- 見出しの設定 -->
+
+      <!-- bg-imgは自作する．見出しの背景に写真を貼り付ける．pxは横，pyは縦方向のパディングの設定 -->
+      <div class="px-3 py-5 bg-img">
+
+        <!-- bootstrap5のcontainerを使う．文字を白にするためにclassでtext-whiteを指定．-->
+        <div class="container text-white">
+          <h1><i class="bi bi-camera2"></i>フォトギャラリー</h1>
+          <p>かわいい猫たちのフォトギャラリーをご覧ください</p>
+        </div>
+      </div>
+
+      <!-- 写真のグリッド表示の設定 -->
+      <!-- mt-4クラスの追加でmargin top 1.5remと同等の動きをする -->
+      <div class="container mt-4">
+        <!-- グリッドを挿入する gy-3クラスの追加で，グリッドのガターを追加，これにより写真の下にパディングができる -->
+        <div class="row gy-3">
+          <!-- col-lg-4にしておくと，大きい画面の時は横3つに表示して，画面が小さくなった時は勝手に下に改行されるように設定する
+        さらに，画面を小さくする時に3->2->1と列を順々に減らすために col-sm-6クラスを追加する
+        この接頭辞は，「ある画面幅（これは接頭辞によって異なる）以下になったら，グリッドを縦並びにする」という設定
+        また，複数設定すると，例えば画面幅はlgで設定された幅の時はlgの接頭辞がついた方が適用され，smの画面幅になるとsmの接頭辞がついた方の設定が適用される-->
+          <div class="col-lg-4 col-sm-6">
+            <!-- img-thumbnailで写真周りに線を追加して，写真が小さくなる -->
+            <img src="https://source.unsplash.com/C0zDWAPFT9A" alt="cat" class="img-thumbnail">
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <img src="https://source.unsplash.com/fEK4jvgnApg" alt="cat" class="img-thumbnail">
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <img src="https://source.unsplash.com/egfS7HzgKcc" alt="cat" class="img-thumbnail">
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <!-- img-thumbnailで写真周りに線を追加して，写真が小さくなる -->
+            <img src="https://source.unsplash.com/e-S23SJzFqs" alt="cat" class="img-thumbnail">
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <img src="https://source.unsplash.com/Hnwm8ktAd6E" alt="cat" class="img-thumbnail">
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <img src="https://source.unsplash.com/gb3gq2Nh5xE" alt="cat" class="img-thumbnail">
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <!-- img-thumbnailで写真周りに線を追加して，写真が小さくなる -->
+            <img src="https://source.unsplash.com/XKhV1c4oV7c" alt="cat" class="img-thumbnail">
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <img src="https://source.unsplash.com/7qau-YIXn90" alt="cat" class="img-thumbnail">
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <img src="https://source.unsplash.com/QTe-MHNUrz4" alt="cat" class="img-thumbnail">
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- footerの設定 -->
+    <footer class="py-4 mt-5 bg-dark text-center">
+      <div class="container">
+        <!-- text-whiteで文字色を白に設定，-50をつけることでopacityを50%に設定する -->
+        <p class="text-white-50 small">&copy; 2021 proglus.jp</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+      crossorigin="anonymous"></script>
+  </body>
+
+</html>
